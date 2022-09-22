@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Articles from "./Articles";
+import Headline from "./Headline";
 function Home() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
@@ -14,6 +15,7 @@ function Home() {
 
   return (
     <Container>
+        <Headline />    
         <Articles articles={articles} />
     </Container>
   );
