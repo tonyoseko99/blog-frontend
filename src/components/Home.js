@@ -11,29 +11,27 @@ function Home() {
       .then((data) => {
         console.log(data);
         setArticles(data);
+        setHeadline(data[0]);
       });
   }, []);
 
-  // return the first article from the array
-  const Headline = () => {
-    useEffect(() => {
-      console.log(articles[0]);
-      setHeadline(articles[0]);
-    }, []);
-
+  // create a Headline component
+  const Headline = ({headline}) => {
     return (
       <div>
         <h1>{headline.title}</h1>
+        <img src={headline.image_url} alt={headline.title} />
         <p>{headline.content}</p>
       </div>
     );
   };
 
+  // pass the headline article as a prop
   return (
     <Container>
-      <Headline />
+      <Headline headline={headline} />
+      <Articles articles={articles} />
     </Container>
   );
 }
-
 export default Home;
