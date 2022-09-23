@@ -1,16 +1,14 @@
-import { Card, Button } from "react-bootstrap";
 function Article({ article }) {
   return (
-    <Card >
-      <Card.Img variant="top" src={article.image_url} />
-      <Card.Body>
-        <Card.Title>{article.title}</Card.Title>
-        <Card.Text>
+    <div className="card-article" >
+      <img src={article.image_url} alt={article.title} />
+      <div className="card-body">
+        <h2>{article.title}</h2>
+        <p>
           {article.content}
-        </Card.Text>
-        <Button variant="primary">read more</Button>
-      </Card.Body>
-    </Card>
+        </p>
+      </div>
+    </div>
   );
 }
 

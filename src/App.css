@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+/* body */
+.App{
+  background-color: #e4e3d6;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headline-container{
+  background-color: black;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.headline-container > .blog-title{
+  border-bottom: 0.5px solid #797767;
+  border-top: 0.5px solid #797767;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 9rem;
+  font-weight: 700;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headline{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.headline-card{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline-card-body{
+  margin-left: 1em;
+}
+
+.headline-card > .headline-card-body > p{
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #fff;
+}
+
+.headline-card > .headline-card-body > img{
+  width: 85%;
+  height: 350px;
+  border-radius: 0.5em;
+}
+
+.other-headlines{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  display: flex;
+}
+
+.other-headlines-card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.other-headlines-card div{
+  padding: 10px;
+}
+
+.other-headlines-card img{
+  width: 180px;
+  height: 120px;
+  border-radius: 0.5em;
+}
+
+.other-headlines-card p{
+  font-size: 1.0rem;
+  font-weight: 100;
+}
+
+.other-headlines-card h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* card */
+.card-article{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-article img{
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-article h3{
+  margin: 10px 0;
+}
+
+.card-article p{
+  margin: 10px 0;
+}
+
+.articles-container{
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* Footer */
+.footer{
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
